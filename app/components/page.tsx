@@ -1,13 +1,13 @@
 "use client"
 
-import {MuiCapabilitiesGuard} from '@beeper/matrix-widget-toolkit-mui';
-import {useWidgetApi} from '@beeper/matrix-widget-toolkit-react';
+import {MuiCapabilitiesGuard} from '@matrix-widget-toolkit/mui';
+import {useWidgetApi} from '@matrix-widget-toolkit/react';
 import {EventDirection, WidgetEventCapability} from '@beeper/matrix-widget-api';
 import {useState, useEffect} from 'react';
 import {
     Box
 } from '@mui/material';
-import {RoomEvent} from '@beeper/matrix-widget-toolkit-api';
+import {RoomEvent} from '@matrix-widget-toolkit/api';
 
 
 export default function WidgetPage() {
