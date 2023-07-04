@@ -20,10 +20,10 @@ export default function WidgetPage() {
                         //     EventDirection.Receive,
                         //     'm.room.member'
                         // ),
-                        // WidgetEventCapability.forRoomEvent(
-                        //     EventDirection.Receive,
-                        //     'm.room.message'
-                        // ),
+                        WidgetEventCapability.forRoomEvent(
+                            EventDirection.Receive,
+                            'm.room.message'
+                        ),
                         // WidgetEventCapability.forRoomEvent(
                         //     EventDirection.Receive,
                         //     'm.reaction'
