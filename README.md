@@ -1,3 +1,3 @@
-```bash
-npx create-next-app --example https://github.com/beeper/widget-example --use-yarn --app
-```
+An example widget that demonstrates various widget capabilities.
+
+Take a look at https://github.com/beeper/sdk-docs for instructions on building your own!
