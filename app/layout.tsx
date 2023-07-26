@@ -4,38 +4,51 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import dynamic from "next/dynamic";
 import { WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
+import { useEffect, useState } from "react";
 
 const MuiThemeProvider = dynamic(() => import('@beeper/matrix-widget-toolkit-mui').then((mod) => mod.MuiThemeProvider), {
-  ssr: false,
+    ssr: false,
 })
 const MuiWidgetApiProvider = dynamic(() => import('@beeper/matrix-widget-toolkit-mui').then((mod) => mod.MuiWidgetApiProvider), {
-  ssr: false,
+    ssr: false,
 })
 
-const widgetApiPromise = WidgetApiImpl.create();
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({subsets: ['latin']})
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <MuiThemeProvider>
-          {/* Fallback suspense if no higher one is registered (used for i18n) */}
-          <MuiWidgetApiProvider
-              widgetApiPromise={widgetApiPromise}
-              // widgetRegistration={{
-              //   name: 'Example Widget'
-              // }}
-          >
-            {children}
-          </MuiWidgetApiProvider>
-        </MuiThemeProvider>
-      </body>
-    </html>
-  )
+
+    const [widgetApiPromise, setWidgetApiPromise] = useState<any>(null);
+
+    // Ensure WidgetApi is only created on client-side, since it needs to access "window"
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setWidgetApiPromise(WidgetApiImpl.create({
+                capabilities: [],
+            }));
+        }
+    }, []);
+
+    if (!widgetApiPromise) return (
+        <html lang="en">
+            <body className={inter.className}>
+            </body>
+        </html>
+    );
+
+    return (
+        <html lang="en">
+            <body className={inter.className}>
+                <MuiThemeProvider>
+                    {/* Fallback suspense if no higher one is registered (used for i18n) */}
+                    <MuiWidgetApiProvider widgetApiPromise={widgetApiPromise}>
+                        {children}
+                    </MuiWidgetApiProvider>
+                </MuiThemeProvider>
+            </body>
+        </html>
+    )
 }
