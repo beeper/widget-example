@@ -3,7 +3,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import dynamic from "next/dynamic";
-import {WidgetApiImpl} from '@beeper/matrix-widget-toolkit-api';
+import { WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
 
 const MuiThemeProvider = dynamic(() => import('@beeper/matrix-widget-toolkit-mui').then((mod) => mod.MuiThemeProvider), {
   ssr: false,
@@ -12,10 +12,7 @@ const MuiWidgetApiProvider = dynamic(() => import('@beeper/matrix-widget-toolkit
   ssr: false,
 })
 
-const widgetApiPromise = WidgetApiImpl.create({
-  capabilities: [
-  ],
-});
+const widgetApiPromise = WidgetApiImpl.create();
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,9 +28,9 @@ export default function RootLayout({
           {/* Fallback suspense if no higher one is registered (used for i18n) */}
           <MuiWidgetApiProvider
               widgetApiPromise={widgetApiPromise}
-              widgetRegistration={{
-                name: 'Example Widget'
-              }}
+              // widgetRegistration={{
+              //   name: 'Example Widget'
+              // }}
           >
             {children}
           </MuiWidgetApiProvider>
