@@ -8,12 +8,13 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 
 export default function Messages() {
     const [messages, setMessages] = useState<RoomEvent<any>[]>([])
+    const [loading, setLoading] = useState(true);
     const widgetApi = useWidgetApi();
 
     async function fetchData() {
-        // , roomIds: ["!wFOXJBgtfhaxtKduWk:beeper.com"]
         let messagesResponse: RoomEvent<any>[] = await widgetApi.receiveRoomEvents('m.room.message', { limit: 20 });
         setMessages(messagesResponse);
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -24,6 +25,9 @@ export default function Messages() {
     return (
         <>
             <Back />
+            { loading && (
+                <p>Loading...</p>
+            )}
             { messages.map((message) => {
                 return (
                     <p key={message.event_id}>{`${message.sender}: ${message.content.body}`}</p>
