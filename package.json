@@ -9,7 +9,7 @@
   "dependencies": {
     "@beeper/matrix-widget-api": "^1.5.1",
     "@beeper/matrix-widget-toolkit-api": "^3.3.1",
-    "@beeper/matrix-widget-toolkit-mui": "^1.2.1",
+    "@beeper/matrix-widget-toolkit-mui": "^1.2.3",
     "@beeper/matrix-widget-toolkit-react": "^1.0.8",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",

@@ -5,10 +5,8 @@ import { Inter } from 'next/font/google'
 import dynamic from "next/dynamic";
 import { WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
 import { useEffect, useState } from "react";
+import { MuiThemeProvider } from "@beeper/matrix-widget-toolkit-mui";
 
-const MuiThemeProvider = dynamic(() => import('@beeper/matrix-widget-toolkit-mui').then((mod) => mod.MuiThemeProvider), {
-    ssr: false,
-})
 const MuiWidgetApiProvider = dynamic(() => import('@beeper/matrix-widget-toolkit-mui').then((mod) => mod.MuiWidgetApiProvider), {
     ssr: false,
 })
