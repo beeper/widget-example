@@ -1,12 +1,8 @@
 "use client"
 
-import dynamic from 'next/dynamic'
-import {EventDirection, WidgetEventCapability} from '@beeper/matrix-widget-api';
+import { EventDirection, WidgetEventCapability } from '@beeper/matrix-widget-api';
 import Option from "@/app/components/option";
-
-const MuiCapabilitiesGuard = dynamic(() => import('@beeper/matrix-widget-toolkit-mui').then((mod) => mod.MuiCapabilitiesGuard), {
-    ssr: false,
-})
+import { MuiCapabilitiesGuard } from "@beeper/matrix-widget-toolkit-mui";
 
 export default function Home() {
     return (
