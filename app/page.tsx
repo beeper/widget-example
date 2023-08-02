@@ -17,7 +17,6 @@ export default function Home() {
                         EventDirection.Receive,
                         'm.room.name'
                     ),
-                    // 'org.matrix.msc2762.timeline:*',
                     WidgetEventCapability.forRoomEvent(
                         EventDirection.Receive,
                         'm.room.message'
