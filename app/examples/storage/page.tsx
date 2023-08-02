@@ -1,6 +1,5 @@
 "use client"
 
-import {useWidgetApi} from "@beeper/matrix-widget-toolkit-react";
 import {useState} from "react";
 import Back from "@/app/components/back";
 
@@ -20,7 +19,7 @@ export default function Storage() {
     return (
         <>
             <Back />
-            <p className="mt-4">Using localStorage, a widget can access data across any of the user&apos;s chats.</p>
+            <p className="mt-4">{"Using localStorage, a widget can access data across any of the user's chats."}</p>
             <p className="mt-4">This is useful if you want the user to add their own information, such as preferences and API keys.</p>
 
             { storedText &&
