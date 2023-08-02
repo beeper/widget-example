@@ -12,7 +12,7 @@ export default function Storage() {
         event.preventDefault();
         localStorage.setItem('widget_example_text', text);
 
-        // To automatically update the text displayed when "Set localStorage" is pressed
+        // Automatically update the text displayed when the user changes localStorage
         setStoredText(localStorage.getItem('widget_example_text') || "");
     }
 
