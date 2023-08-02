@@ -2,27 +2,23 @@
 
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
-import { useEffect, useState } from "react";
+import { WidgetApi, WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
 import { MuiThemeProvider, MuiWidgetApiProvider } from "@beeper/matrix-widget-toolkit-mui";
 
 const inter = Inter({subsets: ['latin']})
+
+const widgetApiPromise =
+    typeof window !== "undefined"
+        ? WidgetApiImpl.create({
+            capabilities: [],
+        })
+        : new Promise<WidgetApi>(() => {})
 
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
-
-    const [widgetApiPromise, setWidgetApiPromise] = useState<any>(null);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            setWidgetApiPromise(WidgetApiImpl.create({
-                capabilities: [],
-            }));
-        }
-    }, []);
 
     if (!widgetApiPromise) return (
         <html lang="en">
