@@ -1,6 +1,6 @@
 "use client"
 
-import {useState} from "react";
+import { useState } from "react";
 import Back from "@/app/components/back";
 
 export default function Storage() {

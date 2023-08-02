@@ -1,7 +1,7 @@
 "use client"
 
-import {useWidgetApi} from "@beeper/matrix-widget-toolkit-react";
-import {useState} from "react";
+import { useWidgetApi } from "@beeper/matrix-widget-toolkit-react";
+import { useState } from "react";
 import Back from "@/app/components/back";
 
 export default function Redaction() {

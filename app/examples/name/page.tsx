@@ -1,8 +1,8 @@
 "use client"
 
-import {useWidgetApi} from "@beeper/matrix-widget-toolkit-react";
-import {useEffect, useState} from "react";
-import {StateEvent} from "@beeper/matrix-widget-toolkit-api";
+import { useWidgetApi } from "@beeper/matrix-widget-toolkit-react";
+import { useEffect, useState } from "react";
+import { StateEvent } from "@beeper/matrix-widget-toolkit-api";
 import Back from "@/app/components/back";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
