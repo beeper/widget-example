@@ -11,8 +11,6 @@ const MuiCapabilitiesGuard = dynamic(() => import('@beeper/matrix-widget-toolkit
 export default function Home() {
     return (
         <>
-            {/* Request capabilities here */}
-            {/* alternatively https://github.com/nordeck/matrix-widget-toolkit/blob/main/example-widget-mui/src/AllRoomsPage/AllRoomsPage.tsx */}
             <MuiCapabilitiesGuard
                 capabilities={[
                     WidgetEventCapability.forStateEvent(

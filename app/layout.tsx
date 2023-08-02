@@ -21,7 +21,6 @@ export default function RootLayout({
 
     const [widgetApiPromise, setWidgetApiPromise] = useState<any>(null);
 
-    // Ensure WidgetApi is only created on client-side, since it needs to access "window"
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setWidgetApiPromise(WidgetApiImpl.create({
@@ -41,7 +40,6 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <MuiThemeProvider>
-                    {/* Fallback suspense if no higher one is registered (used for i18n) */}
                     <MuiWidgetApiProvider widgetApiPromise={widgetApiPromise}>
                         {children}
                     </MuiWidgetApiProvider>
