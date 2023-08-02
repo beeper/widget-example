@@ -54,6 +54,7 @@ export default function Home() {
                 <Option path="/examples/reactions" text="Read Reactions"/>
                 <Option path="/examples/redaction" text="Delete Message" />
                 <Option path="/examples/name" text="Room Name" />
+                <Option path="/examples/storage" text="Store Data" />
             </MuiCapabilitiesGuard>
         </>
     );
