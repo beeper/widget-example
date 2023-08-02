@@ -38,7 +38,7 @@ export default function Name() {
             {nameResponse.length && <p className="mt-4">Room name: {nameResponse[0].content.name}</p>}
 
             <form onSubmit={setName}>
-                <input className="block border border-black p-2 w-3/4" value={userInput} onChange={(event) => setUserInput(event.target.value)} placeholder="Enter a name for the room" />
+                <input className="block border border-black p-2 w-3/4 text-black" value={userInput} onChange={(event) => setUserInput(event.target.value)} placeholder="Enter a name for the room" />
                 <button className="block mt-2 bg-black text-white p-2 border border-black hover:bg-white hover:text-black">Set name</button>
             </form>
 
