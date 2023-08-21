@@ -69,23 +69,23 @@
     "@types/events" "^3.0.0"
     events "^3.2.0"
 
-"@beeper/matrix-widget-toolkit-api@^3.3.1", "@beeper/matrix-widget-toolkit-api@^3.3.4":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-api/-/matrix-widget-toolkit-api-3.3.4.tgz#3bb482aabe2427ab11ef91f12cf6b599058bc52a"
-  integrity sha512-OsH+IwhchZRdNvi9AO5aaTTn13fBkueWrM1EzWECht7B3JkTTmUuYepP74vkNfjJwu/RnFQBmQw//hLKP+HvCw==
+"@beeper/matrix-widget-toolkit-api@3.3.5", "@beeper/matrix-widget-toolkit-api@^3.3.5":
+  version "3.3.5"
+  resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-api/-/matrix-widget-toolkit-api-3.3.5.tgz#b5eab9fb01556a8118906d1a113e1e8118aa7ad0"
+  integrity sha512-sjQLIpxrw7PX2vvHekC+zuFfpCnRBwH+p56NaSxHARL6gDABAbrj2RECan1A1moq7g3AU5tkahDHuD0jDs13Pw==
   dependencies:
     "@beeper/matrix-widget-api" "^1.5.0"
     qs "^6.11.2"
     rxjs "^7.8.1"
 
-"@beeper/matrix-widget-toolkit-mui@^1.2.3":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-mui/-/matrix-widget-toolkit-mui-1.2.6.tgz#c3bf9ff6ebb054a9e1ae038afd30cb8585d80d36"
-  integrity sha512-IfxY5fXfmjmo2ejgP9GvXCpZYn2OQq8Kmi7GFWTeFcn8pss7Gv2zaEKW8306PNtsrh0YoDbzmPIJrrWAH71Skg==
+"@beeper/matrix-widget-toolkit-mui@1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-mui/-/matrix-widget-toolkit-mui-1.2.7.tgz#900ecf806d861580724b276d7d159481e1f89f54"
+  integrity sha512-Iv2COvvXDhJyQO3BuHU4CjFU3Fg4LLzqDcLn1r1KL4pKfpGmiMRAqkO0D1QrBC+2iHwQQhZuMVW4Bz6h8Pgfjw==
   dependencies:
     "@beeper/matrix-widget-api" "^1.5.0"
-    "@beeper/matrix-widget-toolkit-api" "^3.3.4"
-    "@beeper/matrix-widget-toolkit-react" "^1.0.10"
+    "@beeper/matrix-widget-toolkit-api" "^3.3.5"
+    "@beeper/matrix-widget-toolkit-react" "^1.0.11"
     "@emotion/cache" "^11.11.0"
     "@emotion/react" "^11.11.1"
     "@emotion/styled" "^11.11.0"
@@ -101,13 +101,13 @@
     react-i18next "^12.3.1"
     react-use "^17.4.0"
 
-"@beeper/matrix-widget-toolkit-react@^1.0.10", "@beeper/matrix-widget-toolkit-react@^1.0.8":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-react/-/matrix-widget-toolkit-react-1.0.10.tgz#786e014f324ddbccf7c0d1066ca4008a7b67ac7d"
-  integrity sha512-zaxrAkPSquAmB4fp7rJac4oWOBP+zCWj4SygNaH7seT3OR7HGBxXPFQaSqEuZRFfrjVQ6C0TTVRlQ2ykJPHlFg==
+"@beeper/matrix-widget-toolkit-react@1.0.11", "@beeper/matrix-widget-toolkit-react@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-react/-/matrix-widget-toolkit-react-1.0.11.tgz#3d67a8e1890f3734ed0c64e03893a0f33967e923"
+  integrity sha512-POulyp5PwCM7JLvDCltznz4xp1SPWiTHXRd+n2AedUXK8R1ZYqXU9p/QgeBImRMxBYlSvXoS48vjq8qLN6rYZw==
   dependencies:
     "@beeper/matrix-widget-api" "^1.5.0"
-    "@beeper/matrix-widget-toolkit-api" "^3.3.4"
+    "@beeper/matrix-widget-toolkit-api" "^3.3.5"
     react "^17.0.2"
     react-error-boundary "^3.1.4"
     react-use "^17.4.0"
