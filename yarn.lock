@@ -69,7 +69,7 @@
     "@types/events" "^3.0.0"
     events "^3.2.0"
 
-"@beeper/matrix-widget-toolkit-api@3.3.5", "@beeper/matrix-widget-toolkit-api@^3.3.5":
+"@beeper/matrix-widget-toolkit-api@^3.3.5":
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-api/-/matrix-widget-toolkit-api-3.3.5.tgz#b5eab9fb01556a8118906d1a113e1e8118aa7ad0"
   integrity sha512-sjQLIpxrw7PX2vvHekC+zuFfpCnRBwH+p56NaSxHARL6gDABAbrj2RECan1A1moq7g3AU5tkahDHuD0jDs13Pw==
@@ -78,7 +78,7 @@
     qs "^6.11.2"
     rxjs "^7.8.1"
 
-"@beeper/matrix-widget-toolkit-mui@1.2.7":
+"@beeper/matrix-widget-toolkit-mui@^1.2.7":
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-mui/-/matrix-widget-toolkit-mui-1.2.7.tgz#900ecf806d861580724b276d7d159481e1f89f54"
   integrity sha512-Iv2COvvXDhJyQO3BuHU4CjFU3Fg4LLzqDcLn1r1KL4pKfpGmiMRAqkO0D1QrBC+2iHwQQhZuMVW4Bz6h8Pgfjw==
@@ -101,7 +101,7 @@
     react-i18next "^12.3.1"
     react-use "^17.4.0"
 
-"@beeper/matrix-widget-toolkit-react@1.0.11", "@beeper/matrix-widget-toolkit-react@^1.0.11":
+"@beeper/matrix-widget-toolkit-react@^1.0.11":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@beeper/matrix-widget-toolkit-react/-/matrix-widget-toolkit-react-1.0.11.tgz#3d67a8e1890f3734ed0c64e03893a0f33967e923"
   integrity sha512-POulyp5PwCM7JLvDCltznz4xp1SPWiTHXRd+n2AedUXK8R1ZYqXU9p/QgeBImRMxBYlSvXoS48vjq8qLN6rYZw==
