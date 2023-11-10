@@ -2,7 +2,7 @@
 
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { WidgetApi, WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
+import { WidgetApiImpl } from '@beeper/matrix-widget-toolkit-api';
 import { MuiThemeProvider, MuiWidgetApiProvider } from "@beeper/matrix-widget-toolkit-mui";
 
 const inter = Inter({subsets: ['latin']})
@@ -12,7 +12,9 @@ const widgetApiPromise =
         ? WidgetApiImpl.create({
             capabilities: [],
         })
-        : new Promise<WidgetApi>(() => {})
+        : (() => {
+            // not calling WidgetApiImpl.create since "window" is not available
+        })();
 
 export default function RootLayout({
     children,
